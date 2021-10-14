@@ -9,12 +9,12 @@
 
 ## [Click here to go to the Website!]()
 
-![HomePage](https://github.com/ParkerM2/social-media-site/blob/main/src/images/homepage.PNG)
+![HomePage](https://github.com/ParkerM2/revisedportfolio/blob/main/src/images/portfolioA.PNG?raw=true)
 
 ### 🏠 [Project Homepage](https://github.com/ParkerM2/social-media-site)
 
 ---
 
-![HomePage2](https://github.com/ParkerM2/social-media-site/blob/main/src/images/secondcontent.PNG)
+![HomePage2](https://github.com/ParkerM2/revisedportfolio/blob/main/src/images/portfolioB.PNG?raw=true)
 
 ---
