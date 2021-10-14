@@ -7,11 +7,9 @@
 
 </p>
 
-## [Click here to go to the Website!]()
+## [Click here to go to the Website!](https://parkermanning.net)
 
 ![HomePage](https://github.com/ParkerM2/revisedportfolio/blob/main/src/images/portfolioA.PNG?raw=true)
-
-### 🏠 [Project Homepage](https://github.com/ParkerM2/social-media-site)
 
 ---
 
