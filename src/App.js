@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from './components/footer/Footer';
+import Footer from './components/Footer/Footer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import LandingPage from '../src/Pages/LandingPage';
 import Navbar from '../src/components/navbar/Navbar';
