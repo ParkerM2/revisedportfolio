@@ -16,6 +16,12 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Divider } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import HttpIcon from '@mui/icons-material/Http';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
+const linkedIn = "https://www.linkedin.com/in/parkerm2/";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -28,7 +34,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function ProjectCard({title, subheader, alt}) {
+export default function ProjectCard({title, subheader, alt, mainPic, about, techStack, firebase, TLDRFirebase, githubLink, siteLink, padding}) {
     const [expanded, setExpanded] = React.useState(false);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -38,7 +44,6 @@ export default function ProjectCard({title, subheader, alt}) {
     };
 
     const handleClose = () => {
-    
       setAnchorEl(null);
     };
 
@@ -47,39 +52,31 @@ export default function ProjectCard({title, subheader, alt}) {
   };
 
   return (
-    <Card sx={{ maxWidth: 345, bgcolor: 'primary.light', color: 'secondary.main' }} elevation={12}>
+    <Card sx={{ bgcolor: 'primary.light', color: 'primary.dark' }} elevation={12}>
       <CardHeader
-        action={
-          <IconButton onclick={handleClick} aria-label="settings" color="secondary">
-            <MoreVertIcon />
-                <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-                    <MenuItem onClick={handleClose} href="#contact">Hire Me </MenuItem>
-                    <MenuItem onClick={handleClose} href="#projects">Projects </MenuItem>
-                </Menu>
-          </IconButton>
-        }
         title={title}
         subheader={subheader}
       />
       <CardMedia
         component="img"
-        height="194"
-        image="/static/images/cards/paella.jpg"
+        image={mainPic}
+        height="100%"
         alt={alt}
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the mussels,
-          if you like.
+        <Typography paragraph paddingBottom={padding} color="primary.dark">
+          {about}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+      <CardActions>
+        <IconButton target="__blank" href={githubLink} variant="contained">
+          <GitHubIcon fontSize="large" color="primary" />
         </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
+        <IconButton target="__blank" href={linkedIn} variant="contained">
+          <LinkedInIcon fontSize="large" color="primary" />
+        </IconButton>
+        <IconButton target="__blank" href={siteLink} variant="contained">
+          <HttpIcon fontSize="large" color="primary" />
         </IconButton>
         <ExpandMore
           expand={expanded}
@@ -87,36 +84,30 @@ export default function ProjectCard({title, subheader, alt}) {
           aria-expanded={expanded}
           aria-label="show more"
         >
-          <ExpandMoreIcon />
+          <ExpandMoreIcon fontSize="large" color="primary"/>
         </ExpandMore>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-            aside for 10 minutes.
+        <CardContent autoFocus>
+          <Typography padding={2} align="left" variant="h5"><b>Technologies used :</b> {techStack}</Typography>
+          <Divider color="primary.light" />
+          <Typography paddingTop={4} align="left" paragraph>
+            <b>Firebase : </b> {firebase}
           </Typography>
-          <Typography paragraph>
-            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
-            medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-            occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-            large plate and set aside, leaving chicken and chorizo in the pan. Add
-            pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-            stirring often until thickened and fragrant, about 10 minutes. Add
-            saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
+          <Typography color="secondary.dark" variant="h7">
+            TLDR: {TLDRFirebase}
           </Typography>
-          <Typography paragraph>
-            Add rice and stir very gently to distribute. Top with artichokes and
-            peppers, and cook without stirring, until most of the liquid is absorbed,
-            15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
-            mussels, tucking them down into the rice, and cook again without
-            stirring, until mussels have opened and rice is just tender, 5 to 7
-            minutes more. (Discard any mussels that don’t open.)
-          </Typography>
-          <Typography>
-            Set aside off of the heat to let rest for 10 minutes, and then serve.
-          </Typography>
+          <CardActions>
+            <ExpandMore
+              expand={expanded}
+              onClick={handleExpandClick}
+              aria-expanded={expanded}
+              aria-label="show more"
+              sx={{bgcolor: 'secondary.main'}}
+            >
+              <ExpandMoreIcon fontSize="large" color="primary"/>
+            </ExpandMore>
+          </CardActions>
         </CardContent>
       </Collapse>
     </Card>
