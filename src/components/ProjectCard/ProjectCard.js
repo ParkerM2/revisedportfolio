@@ -60,10 +60,10 @@ export default function ProjectCard({title, subheader, alt, mainPic, about, tech
       <CardMedia
         component="img"
         image={mainPic}
-        height="100%"
+        height={200}
         alt={alt}
       />
-      <CardContent>
+      <CardContent sx={{maxHeight: 225, minHeight: 185}}>
         <Typography paragraph paddingBottom={padding} color="primary.dark">
           {about}
         </Typography>
