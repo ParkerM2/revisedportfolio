@@ -8,7 +8,7 @@ import {
 export default function Footer() {
   return (
     <>
-      <AppBar position="static" sx={{backgroundColor: 'primary.light'}}>
+      <AppBar position="static" sx={{backgroundColor: '#757575'}}>
         <Toolbar>
           <Typography color="primary.main" variant="body1">
             © 2021 Parker Manning

@@ -41,7 +41,7 @@ export default function MainCard(props) {
         <Grid item>
           <Paper
             sx={{
-              backgroundColor: 'primary.light',
+              backgroundColor: '#757575',
               height: 600,
               maxWidth: 350,
               minWidth: 350

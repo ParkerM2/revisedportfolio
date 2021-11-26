@@ -52,7 +52,7 @@ export default function ProjectCard({title, subheader, alt, mainPic, about, tech
   };
 
   return (
-    <Card sx={{ bgcolor: 'primary.light', color: 'primary.dark' }} elevation={12}>
+    <Card sx={{ bgcolor: '#757575', color: 'primary.dark'}} elevation={12}>
       <CardHeader
         title={title}
         subheader={subheader}
@@ -91,12 +91,21 @@ export default function ProjectCard({title, subheader, alt, mainPic, about, tech
         <CardContent autoFocus>
           <Typography padding={2} align="left" variant="h5"><b>Technologies used :</b> {techStack}</Typography>
           <Divider color="primary.light" />
-          <Typography paddingTop={4} align="left" paragraph>
+          {firebase ? (
+            <Typography paddingTop={4} align="left" paragraph>
             <b>Firebase : </b> {firebase}
-          </Typography>
-          <Typography color="secondary.dark" variant="h7">
+            </Typography>
+            ) : (
+              null
+            )
+          }
+          {TLDRFirebase ? (
+             <Typography color="secondary.dark" variant="h7">
             TLDR: {TLDRFirebase}
           </Typography>
+          ) : (
+              null
+          )}
           <CardActions>
             <ExpandMore
               expand={expanded}
