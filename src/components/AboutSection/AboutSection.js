@@ -92,7 +92,7 @@ export default function AboutSection() {
                     </Grid>
                     <Grid item lg={3} xs={12} >
                         <ProjectCard
-                            title="Manning Signs & Shirts Inc."
+                            title="Manning Signs"
                             subheader="React, Node, Firebase, JavaScript, MUI"
                             alt="Social Media Site Image"
                             mainPic={signLandingScreen}
@@ -107,7 +107,7 @@ export default function AboutSection() {
                     </Grid>
                     <Grid item lg={3} xs={12} >
                         <ProjectCard
-                            title="One-For-All Crypto"
+                            title="OFA Crypto"
                             subheader={techUsedCrypto}
                             alt="Crypto-Site Image"
                             mainPic='https://github.com/ParkerM2/Crypto-Site/blob/main/src/images/home-screen.PNG?raw=true'
