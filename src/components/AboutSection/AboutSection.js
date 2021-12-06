@@ -21,7 +21,6 @@ import boys from '../../images/boys.PNG';
 import pic from '../../images/portfolio pic.jpg';
 import signLandingScreen from '../../images/landingScreen.PNG';
 import thingLandingScreen from '../../images/secondcontent.PNG';
-import TechList from '../TechList/TechList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 
