@@ -21,7 +21,9 @@ import boys from '../../images/boys.PNG';
 import pic from '../../images/portfolio pic.jpg';
 import signLandingScreen from '../../images/landingScreen.PNG';
 import thingLandingScreen from '../../images/secondcontent.PNG';
-
+import TechList from '../TechList/TechList';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
 
 const aboutThings = "Things is a practice social media site that I made from scratch. This was built to work on my ability to create a profile page that can receive unique information and have it react correctly to different profiles as well as an incorrect profile id. This site also proved to be good practice with firebase auth/storage/firestore backend."
 const aboutManningSigns = "I built this website from scratch for my parents company. Very basic single page site that allows the owner to sign in and change the about section for employees and their picture. It also has the ability to add more images to the gallery section. The backend and authentication of users was made with Firebase."
@@ -60,12 +62,12 @@ export default function AboutSection() {
         >
             <Grid container paddingLeft={3} paddingRight={3} paddingTop={6} spacing={3} justifyContent="space-around">
                 <Grid item xs={12} md={5} lg={5}>
-                    <Typography color="#b3e5fc" variant="h3" fontFamily="Shadows Into Light">Parker Manning</Typography>
+                    <Typography color="#b3e5fc" variant="h1" fontFamily="Shadows Into Light">Parker Manning</Typography>
                     <Typography color="#b3e5fc" variant="h3">software engineer</Typography>
                     <br></br>
                     <Typography color="#b3e5fc" variant="h5">greenville, ms</Typography>
                     <br></br>
-                    <Typography color="#b3e5fc" variant="h7">A long time software and tech enthusiast with a background in Signs, T-Shirts, Dog Rescue work, Outpatient Therapy work, and a BS in Kinesiology. While training patients I began doing the JavaScript crash course on scrimba and was hooked. This led me to a University of Texas at Austin MERN stack Boot-Camp. I came away from this with experience working with remote team mates on projects as well as the basis of React knowledge needed to propel me into a great career. As of now I'm currently helping run my parents business while learning new technologies and applying to open roles.</Typography>
+                    <Typography color="#b3e5fc" variant="h6">A long time software and tech enthusiast with a background in Signs, T-Shirts, Dog Rescue work, Outpatient Therapy work, and a BS in Kinesiology. While training patients I began doing the JavaScript crash course on scrimba and was hooked. This led me to a University of Texas at Austin MERN stack Boot-Camp. I came away from this with experience working with remote team mates on projects as well as the basis of React knowledge needed to propel me into a great career. As of now I'm currently helping run my parents business while learning new technologies and applying to open roles.</Typography>
                 </Grid>
                 <Grid item xs={12} md={5} lg={5}>
                     <ProfileCard />
@@ -74,7 +76,7 @@ export default function AboutSection() {
                     <Divider color="black"/>
                     <Typography paddingTop={6} paddingBottom={6} align="center" color="#b3e5fc" variant="h3"> Projects </Typography>                   
                 </Grid>
-                <Grid flexDirection="row" container justifyContent="space-around" padding={3} spacing={6}>
+                <Grid container align="center" paddingLeft={3} justifyContent="center" spacing={4}>
                     <Grid item lg={3} xs={12} md={5} sm={8} >
                         <ProjectCard
                             title="Social Media Site"
