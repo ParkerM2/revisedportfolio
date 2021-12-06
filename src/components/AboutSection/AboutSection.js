@@ -12,7 +12,7 @@ import {
     Stack,
     FormControlLabel,
     Container,
-
+    Divider,
 } from '@mui/material';
 import { Box } from '@mui/system';
 import ProfileCard from '../ProfileCard/ProfileCard';
@@ -58,24 +58,24 @@ export default function AboutSection() {
             paddingBottom: '5vh',
         }}
         >
-            <Grid container padding={2} spacing={1}>
-                <Grid item xs={8} lg={12}>
-                    <Typography color="primary.contrastText" variant="h3">Hi,</Typography>
+            <Grid container paddingLeft={3} paddingRight={3} paddingTop={6} spacing={3} justifyContent="space-around">
+                <Grid item xs={12} md={5} lg={5}>
+                    <Typography color="#b3e5fc" variant="h3" fontFamily="Shadows Into Light">Parker Manning</Typography>
+                    <Typography color="#b3e5fc" variant="h3">software engineer</Typography>
+                    <br></br>
+                    <Typography color="#b3e5fc" variant="h5">greenville, ms</Typography>
+                    <br></br>
+                    <Typography color="#b3e5fc" variant="h7">A long time software and tech enthusiast with a background in Signs, T-Shirts, Dog Rescue work, Outpatient Therapy work, and a BS in Kinesiology. While training patients I began doing the JavaScript crash course on scrimba and was hooked. This led me to a University of Texas at Austin MERN stack Boot-Camp. I came away from this with experience working with remote team mates on projects as well as the basis of React knowledge needed to propel me into a great career. As of now I'm currently helping run my parents business while learning new technologies and applying to open roles.</Typography>
                 </Grid>
-                <Grid item xs={8} lg={12}>
-                    <Typography color="primary.contrastText" variant="h3">I'm Parker,</Typography>
-                </Grid>
-                <Grid item xs={8} lg={3}>
-                    <Typography color="secondary.main" variant="h3">Web Developer.</Typography>
-                </Grid>
-                <Grid item lg={12} md={12} xs={12}>
+                <Grid item xs={12} md={5} lg={5}>
                     <ProfileCard />
                 </Grid>
                 <Grid item lg={12} xs={12} md={12}>
-                    <Typography paddingTop={10} paddingBottom={6} align="center" color="secondary.main" variant="h3"> Projects </Typography>
+                    <Divider color="black"/>
+                    <Typography paddingTop={6} paddingBottom={6} align="center" color="#b3e5fc" variant="h3"> Projects </Typography>                   
                 </Grid>
                 <Grid flexDirection="row" container justifyContent="space-around" padding={3} spacing={6}>
-                    <Grid item lg={3} xs={12} >
+                    <Grid item lg={3} xs={12} md={5} sm={8} >
                         <ProjectCard
                             title="Social Media Site"
                             subheader="React, Node, Firebase, JavaScript, MUI"
@@ -90,7 +90,7 @@ export default function AboutSection() {
                             padding={thingPadding}
                         />
                     </Grid>
-                    <Grid item lg={3} xs={12} >
+                    <Grid item lg={3} xs={12} md={5} sm={8} >
                         <ProjectCard
                             title="Manning Signs"
                             subheader="React, Node, Firebase, JavaScript, MUI"
@@ -105,20 +105,20 @@ export default function AboutSection() {
                             padding={.6}
                         />
                     </Grid>
-                    <Grid item lg={3} xs={12} >
+                    <Grid item lg={3} xs={12} md={5} sm={8} >
                         <ProjectCard
                             title="OFA Crypto"
                             subheader={techUsedCrypto}
                             alt="Crypto-Site Image"
                             mainPic='https://github.com/ParkerM2/Crypto-Site/blob/main/src/images/home-screen.PNG?raw=true'
                             about={aboutCryptoSite}
-                            techStack={techUsedThings}
+                            techStack={techUsedCrypto}
                             githubLink={githubLinkCryptoSite}
                             siteLink={siteLinkCryptoSite}
                             padding={6.5}
                         />
                     </Grid>
-                    <Grid item lg={3} xs={12} >
+                    <Grid item lg={3} xs={12} md={5} sm={8} >
                         <ProjectCard
                             title="Covid Tracker"
                             subheader={techUsedVueCovid}

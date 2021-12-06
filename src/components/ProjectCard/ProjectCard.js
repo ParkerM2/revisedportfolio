@@ -89,7 +89,7 @@ export default function ProjectCard({title, subheader, alt, mainPic, about, tech
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent autoFocus>
-          <Typography padding={2} align="left" variant="h5"><b>Technologies used :</b> {techStack}</Typography>
+          <Typography color="" padding={2} align="left" variant="h5"><b>Technologies used :</b> {techStack}</Typography>
           <Divider color="primary.light" />
           {firebase ? (
             <Typography paddingTop={4} align="left" paragraph>
@@ -100,7 +100,7 @@ export default function ProjectCard({title, subheader, alt, mainPic, about, tech
             )
           }
           {TLDRFirebase ? (
-             <Typography color="secondary.dark" variant="h7">
+             <Typography color="#b3e5fc" variant="h7">
             TLDR: {TLDRFirebase}
           </Typography>
           ) : (
